@@ -16,6 +16,13 @@ Route::get('/', function () {
 });
 
 \App\Post::create([
-    'title'=>'testtitle',
-    'content'=>'testcontent',
+    'title'=>'test title',
+    'content'=>'test content',
 ]);
+
+
+protected $fillable = [
+    'title',
+    'content',
+    'is_feature'
+];

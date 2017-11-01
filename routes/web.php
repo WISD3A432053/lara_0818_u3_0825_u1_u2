@@ -13,16 +13,11 @@
 
 Route::get('/', function () {
     return view('welcome');
+    \App\Post::create([
+        'title'=>'testtitle',
+        'content'=>'testcontent',
+    ]);
 });
 
-$post = new \App\Post();
-$post->title = 'test title';
-$post->content = 'test content';
-$post->save();
 
 
-protected $fillable = [
-    'title',
-    'content',
-    'is_feature'
-];
